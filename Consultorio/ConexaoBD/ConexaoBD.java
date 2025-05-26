@@ -28,7 +28,7 @@ public class ConexaoBD {
     }
 
     public static void dadosbd(){
-        name = JOptionPane.showInputDialog("Nome: ");
+        name = JOptionPane.showInputDialog("Nome do banco: ");
         user = JOptionPane.showInputDialog("Usuario: ");
         pass = JOptionPane.showInputDialog("Senha: ");
         
