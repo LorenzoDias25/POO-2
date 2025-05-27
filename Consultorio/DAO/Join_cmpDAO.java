@@ -34,7 +34,7 @@ public class Join_cmpDAO {
         ResultSet rs = null;
         ArrayList Lista = new ArrayList();
         try {
-            String SQL = "SELECT ID_consulta,nome_pac,nome_med, data,hora, compareceu FROM consultas, medicos,pacientes WHERE consultas.ID_consulta = medicos.id AND medicos.id = ? ORDER BY consultas.ID_consulta;";
+            String SQL = "SELECT ID_consulta,nome_pac,nome_med, data,hora, compareceu FROM consultas, medicos,pacientes WHERE consultas.id_medico = medicos.id AND consultas.id_paciente = pacientes.codigo AND medicos.id = ? ORDER BY consultas.ID_consulta;";
             connL = this.conn;
             ps = connL.prepareStatement(SQL);
             ps.setInt(1, id);
@@ -72,7 +72,7 @@ public class Join_cmpDAO {
         ResultSet rs = null;
         ArrayList Lista = new ArrayList();
         try {
-            String SQL = "SELECT ID_consulta,nome_pac,nome_med, data,hora, compareceu FROM consultas, medicos,pacientes WHERE pacientes.codigo = consultas.ID_consulta AND pacientes.codigo = ? ORDER BY consultas.ID_consulta;";
+            String SQL = "SELECT ID_consulta,nome_pac,nome_med, data,hora, compareceu FROM consultas, medicos,pacientes WHERE pacientes.codigo = consultas.id_paciente AND consultas.id_medico = medicos.id AND pacientes.codigo = ? ORDER BY consultas.ID_consulta;";
             connL = this.conn;
             ps = connL.prepareStatement(SQL);
             ps.setInt(1, id);
