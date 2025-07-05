@@ -43,4 +43,4 @@ Praticar os pilares da POO em Java, desenvolvendo habilidades em:
 
 Lorenzo Canabarro Dias
 
-> Repositório criado para atividades do curso técnico/profissionalizante em Programação Orientada a Objetos.
+> Repositório criado para atividades do curso técnico em Programação Orientada a Objetos.
